@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# OU.GG
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+OU.GG es una aplicación web,de escritorio y móvil que permite a los usuarios buscar nombres de cuenta en League of Legends y proporciona estadísticas detalladas basadas en su rendimiento y actividades en el juego. El objetivo de esta aplicación es ofrecer a los jugadores una herramienta accesible y fácil de usar para mejorar su juego mediante el análisis de sus propias estadísticas y las de sus oponentes. El proyecto abarca soporte para diversas plataformas incluyendo web, móvil y escritorio.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- **Búsqueda de Usuario**: Permite a los usuarios buscar cualquier nombre de cuenta en League of Legends.
+- **Visualización de Estadísticas**: Muestra estadísticas detalladas como la tasa de victorias, selección de campeones, y más.
+- **Multiplataforma**: Disponible como una aplicación web, una aplicación móvil y una aplicación de escritorio.
+- **Interfaz de Usuario Responsiva**: Diseñada para funcionar de manera eficiente en múltiples dispositivos y tamaños de pantalla.
+- **Actualizaciones Automáticas**: Las estadísticas se actualizan regularmente para reflejar los datos más recientes de los juegos.
 
-### `npm start`
+## Tecnologías Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Este proyecto se construye utilizando una combinación de tecnologías:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: Un framework de JavaScript para construir interfaces de usuario. Se utiliza para la versión web, aprovechando sus componentes reutilizables y su ecosistema extenso para crear una experiencia de usuario fluida y dinámica.
+- **React Native + Expo**: React Native extiende React, permitiendo desarrollar aplicaciones nativas para móviles usando JavaScript y React.
+- **Expo**: Expo proporciona un conjunto de herramientas y servicios que simplifican el desarrollo y las pruebas de aplicaciones React Native, facilitando la construcción de la aplicación sin necesidad de configurar entornos nativos.
+- **Electron**: Un framework que permite desarrollar aplicaciones de escritorio nativas usando tecnologías web como JavaScript, HTML y CSS, basado en Chromium y Node.js. Esto permite un desarrollo unificado entre la web y el escritorio.
+- **API de Riot Games**: Utilizamos esta API para obtener datos en tiempo real y precisos sobre los jugadores y partidas de League of Legends. Esta integración permite a nuestra aplicación mostrar estadísticas actualizadas y detalladas de los jugadores.
 
-### `npm test`
+## Instalación
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para configurar y ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
-### `npm run build`
+### Requisitos Previos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Asegúrate de tener instalado Node.js y npm (o yarn) en tu computadora como gestor de paquetes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Clonar el Repositorio
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/FranciscoFerreiraT/OU.GG.git
+cd tu-repositorio
+```
 
-### `npm run eject`
+### Instalar dependecias
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm install
+```
+o si prefieres usar yarn:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+yarn install
+```
+### Configuración de la API
+Para acceder a la API de Riot Games, necesitarás una clave API que debe ser incluida en tu configuración, esta clave en este caso nos la facilita Riot Games en su [pagina](https://developer.riotgames.com/) de desarrolladores 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Ejecutar la Aplicación
+Para iniciar la aplicación en diferentes plataformas, utiliza los comandos correspondientes:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Web
+Este es nuestro caso en este repositorio
+```
+npm start
+```
+### Móvil con Expo
+```
+expo start
+```
+### Escritorio con Electron
+```
+npm run electron-start
+```
