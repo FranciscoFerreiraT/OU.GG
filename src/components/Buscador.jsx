@@ -6,7 +6,7 @@ import logo from '../img/LOGO.OU.png';
 function TextBoxWithButton() {
   const [inputValue, setInputValue] = useState('');
   const [playerData, setPlayerData] = useState({});
-  const API_KEY = "RGAPI-bee4b51a-9266-426f-a0f0-0e8f34a69e73"
+  const API_KEY = "TU-API-KEY"
 
   function buscar_Jugador() {
     var APICallString = `/lol/summoner/v4/summoners/by-name/${encodeURIComponent(inputValue)}?api_key=${API_KEY}`;
