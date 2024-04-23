@@ -1,4 +1,10 @@
-# OU.GG
+<p align="center">
+  <img src="https://github.com/FranciscoFerreiraT/OU.GG/assets/92456485/63033678-54b1-4dfa-a029-fc6fe9197864" alt="LOGO OU">
+</p>
+
+
+ ## OU.GG
+
 
 OU.GG es una aplicación web,de escritorio y móvil que permite a los usuarios buscar nombres de cuenta en League of Legends y proporciona estadísticas detalladas basadas en su rendimiento y actividades en el juego. El objetivo de esta aplicación es ofrecer a los jugadores una herramienta accesible y fácil de usar para mejorar su juego mediante el análisis de sus propias estadísticas y las de sus oponentes. El proyecto abarca soporte para diversas plataformas incluyendo web, móvil y escritorio.
 
