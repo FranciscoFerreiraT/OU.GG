@@ -37,5 +37,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://euw1.api.riotgames.com"
+
+  "devDependencies": {
+    "http-proxy-middleware": "^3.0.0"
+  }
 }
