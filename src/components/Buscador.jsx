@@ -4,21 +4,15 @@ import axios from 'axios';
 import logo from '../img/LOGO.OU.png';
 
 function TextBoxWithButton() {
-<<<<<<< HEAD
   const [inputValue, setInputValue] = useState(''); 
   const [playerData, setPlayerData] = useState({}); 
   const [playerLvlIco, setPlayerLvlIco] = useState({}); 
-=======
-  const [inputValue, setInputValue] = useState('');
-  const [playerData, setPlayerData] = useState({});
-  const API_KEY = "TU-API-KEY"
->>>>>>> 864400abff48b268fa41ffb34a328735a75aec25
 
   function buscarJugador() {
     const [playerName, playerTag] = inputValue.split('#');
     console.log(playerName); 
     console.log(playerTag); 
-    const API_KEY = "RGAPI-aee64d73-bf63-4467-8111-e7a4bb9fdb1a"; 
+    const API_KEY = "api"; 
 
     
     const endpoint = `/europe/riot/account/v1/accounts/by-riot-id/${encodeURIComponent(playerName)}/${encodeURIComponent(playerTag)}?api_key=${API_KEY}`;
