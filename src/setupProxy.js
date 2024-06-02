@@ -1,3 +1,4 @@
+//setupProxy.js
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
@@ -20,8 +21,18 @@ module.exports = function(app) {
       pathRewrite: {
         '^/euw1': '',
       },
-      logLevel: 'debug', // Habilita el registro detallado
+      logLevel: 'debug', 
     })
   );
-  
+
+  app.use(
+    '/cdn', 
+    createProxyMiddleware({
+      target: 'https://ddragon.leagueoflegends.com',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/cdn': '',
+      },
+    })
+  );
 };

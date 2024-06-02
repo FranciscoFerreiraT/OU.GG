@@ -5,9 +5,9 @@ function Header() {
     <header>
       <nav>
         <ul>
-          <li><a href="#home">Analisis de Campeones</a></li>
-          <li><a href="#services">Buscador de Invocador</a></li>
-          <li><a href="#contact">Tier List</a></li>
+          <li><a href="https://github.com/FranciscoFerreiraT/OU.GG">Versión Movil</a></li>
+          <li><a href="https://github.com/FranciscoFerreiraT/OU.GG">Versión Web</a></li>
+          <li><a href="https://github.com/FranciscoFerreiraT/OU.GG">Versión Escritorio</a></li>
         </ul>
       </nav>
     </header>

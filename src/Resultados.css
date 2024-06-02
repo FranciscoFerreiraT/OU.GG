@@ -1,0 +1,144 @@
+/* Resultados.css */
+.resultados-wrapper {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start;
+  gap: 20px; 
+  padding: 20px;
+  margin-top: 1100px; 
+  margin-left: 50px; 
+}
+
+.player-stats {
+  border: 1px solid #444;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1c1c2e; 
+  color: #ccc; 
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  text-align: center; 
+}
+
+.player-stats h2 {
+  font-size: 18px; 
+  margin-bottom: 10px; 
+  color: #9d9dff; 
+}
+
+.rank-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rank-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rank, .lp, .winrate, .wins-losses {
+  font-size: 14px; 
+  color: #fff; 
+}
+
+.resultados-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  flex-grow: 1; 
+}
+
+.partida {
+  border: 1px solid #444;
+  padding: 20px; 
+  border-radius: 10px;
+  background-color: #2c2c2c; 
+  color: #ccc; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.win {
+  background-color: #3c6e47; 
+}
+
+.loss {
+  background-color: #6e3c3c; 
+}
+
+.partida-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px; 
+  font-weight: bold;
+}
+
+.partida-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.champion-icon {
+  width: 60px; 
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #555;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px; 
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 5px;
+}
+
+.item-icon {
+  width: 40px; 
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #555;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 200px; 
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.player-name {
+  font-size: 14px; 
+  flex: 1; 
+}
+
+.player-champion {
+  width: 30px; 
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #555;
+}
+
+.me {
+  font-weight: bold;
+  color: #00aaff;
+}

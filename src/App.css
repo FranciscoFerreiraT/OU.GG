@@ -1,12 +1,20 @@
 header {
-  background-color: #b81f1f; 
+  background-color: #8e313f; 
   padding: 20px;
   color: white;
   text-align: center;
+  position: relative;
 }
 
 body {
-  background-color: #1a1515;
+  
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('img/lol.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+
+
 }
 
 
@@ -19,7 +27,8 @@ nav {
 nav ul {
   list-style-type: none; 
   padding: 0; 
-  margin: 0; 
+  margin: 0;
+  margin-left: 180px;
   display: flex; 
   gap: 20px; 
 }
@@ -32,6 +41,7 @@ nav a {
   text-decoration: none;
   font-weight: bold; 
   font-size: 1.2rem; 
+  margin-right: 150px;
   transition: color 0.3s ease; 
 }
 
@@ -68,7 +78,7 @@ input {
   width: 500px; 
   font-size: 16px;
   border-radius: 5px; 
-  border: 2px solid #007bff; 
+  border: 2px solid #8e313f; 
   margin-top: -100px;
 
 }
@@ -79,7 +89,7 @@ input {
 button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #007BFF; 
+  background-color: #8e313f; 
   color: white; 
   border: none;
   border-radius: 5px; 
@@ -87,7 +97,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #581a1a;
 }
 .textbox-with-button {
   text-align: center;
