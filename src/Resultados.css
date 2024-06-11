@@ -11,20 +11,20 @@
 .player-stats {
   border: 1px solid #444;
   padding: 20px;
-  margin-top: 50px;
   border-radius: 10px;
+  margin-top: 50px;
   background-color: #1c1c2e; 
   color: #ccc; 
   width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   text-align: center; 
-  position: relative;
+  position: relative; 
 }
 
 .icon-container {
+  position: absolute;
   border: 1px solid #444;
-  position: absolute; 
-  top: -80px; 
+  top: -70px; 
   left: 50%;
   transform: translateX(-50%);
   background-color: #1c1c2e; 
@@ -48,7 +48,7 @@
 
 .player-stats h2 {
   font-size: 18px; 
-  margin-top: 70px; /* Asegurar suficiente espacio para el icono y el nombre */
+  margin-top: 70px; 
   margin-bottom: 10px; 
   color: #9d9dff; 
 }
