@@ -8,7 +8,7 @@ function Buscador({ onShowResultados }) {
 
   function buscarJugador() {
     const [playerName, playerTag] = inputValue.split('#');
-    const API_KEY = "RGAPI-5b56c035-d872-401e-bd24-f950a81c88d5";
+    const API_KEY = "RGAPI-4c3f29f7-fc0d-401f-9f7a-2967ba4e58ed";
 
     const endpoint = `/europe/riot/account/v1/accounts/by-riot-id/${encodeURIComponent(playerName)}/${encodeURIComponent(playerTag)}?api_key=${API_KEY}`;
 
