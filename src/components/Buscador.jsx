@@ -8,7 +8,7 @@ function Buscador({ onShowResultados }) {
 
   function buscarJugador() {
     const [playerName, playerTag] = inputValue.split('#');
-    const API_KEY = "RGAPI-4c3f29f7-fc0d-401f-9f7a-2967ba4e58ed";
+    const API_KEY = "RGAPI-5b56c035-d872-401e-bd24-f950a81c88d5";
 
     const endpoint = `/europe/riot/account/v1/accounts/by-riot-id/${encodeURIComponent(playerName)}/${encodeURIComponent(playerTag)}?api_key=${API_KEY}`;
 
@@ -19,8 +19,10 @@ function Buscador({ onShowResultados }) {
       })
       .then(response2 => {
         const summonerId = response2.data.id;
+        const profileIconId = response2.data.profileIconId;
+        const summonerName = response2.data.name;
         const endpoint3 = `/euw1/lol/league/v4/entries/by-summoner/${encodeURIComponent(summonerId)}?api_key=${API_KEY}`;
-        const endpoint4 = `/europe/lol/match/v5/matches/by-puuid/${encodeURIComponent(response2.data.puuid)}/ids?start=0&count=10&api_key=${API_KEY}`;
+        const endpoint4 = `/europe/lol/match/v5/matches/by-puuid/${encodeURIComponent(response2.data.puuid)}/ids?start=0&count=20&api_key=${API_KEY}`;
         
         return Promise.all([axios.get(endpoint3), axios.get(endpoint4), response2.data]);
       })
@@ -30,8 +32,10 @@ function Buscador({ onShowResultados }) {
 
         const lps = rankedData ? rankedData.leaguePoints : 0;
         const rank = rankedData ? `${rankedData.tier} ${rankedData.rank}` : "Unranked";
-        const totalGames = rankedData ? rankedData.wins + rankedData.losses : 0;
-        const winrate = totalGames > 0 ? ((rankedData.wins / totalGames) * 100).toFixed(2) : 0;
+        const wins = rankedData ? rankedData.wins : 0;
+        const losses = rankedData ? rankedData.losses : 0;
+        const totalGames = wins + losses;
+        const winrate = totalGames > 0 ? ((wins / totalGames) * 100).toFixed(2) : 0;
 
         const matchPromises = matches.map(match => {
           const endpoint5 = `/europe/lol/match/v5/matches/${match}?api_key=${API_KEY}`;
@@ -80,10 +84,13 @@ function Buscador({ onShowResultados }) {
         const playerStats = {
           lps,
           rank,
-          winrate
+          winrate,
+          wins,
+          losses,
+          profileIconId: summonerData.profileIconId,
+          summonerName: summonerData.name
         };
 
-       
         onShowResultados(partidasData, playerStats);
       })
       .catch(error => {

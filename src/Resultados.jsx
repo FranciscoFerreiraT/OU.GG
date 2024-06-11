@@ -6,7 +6,6 @@ const championNameCorrections = {
   "FiddleSticks": "Fiddlesticks",
   "Twistedfate": "TwistedFate",
   "Missfortune": "MissFortune",
- 
 };
 
 const normalizeChampionName = (name) => {
@@ -15,9 +14,15 @@ const normalizeChampionName = (name) => {
 };
 
 const Resultados = ({ partidas, playerStats }) => {
+  const profileIconUrl = `https://ddragon.leagueoflegends.com/cdn/14.11.1/img/profileicon/${playerStats.profileIconId}.png`;
+
   return (
     <div className="resultados-wrapper">
       <div className="player-stats">
+        <div className="icon-container">
+          <img src={profileIconUrl} alt="Player Icon" className="player-icon" />
+          <p className="summoner-name">{playerStats.summonerName}</p>
+        </div>
         <h2>Ranked Solo</h2>
         <div className="rank-info">
           <div className="rank-details">

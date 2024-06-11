@@ -1,27 +1,54 @@
-/* Resultados.css */
 .resultados-wrapper {
   display: flex;
   justify-content: flex-start; 
   align-items: flex-start;
   gap: 20px; 
   padding: 20px;
-  margin-top: 1100px; 
+  margin-top: 3000px; 
   margin-left: 50px; 
 }
 
 .player-stats {
   border: 1px solid #444;
   padding: 20px;
+  margin-top: 50px;
   border-radius: 10px;
   background-color: #1c1c2e; 
   color: #ccc; 
   width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   text-align: center; 
+  position: relative;
+}
+
+.icon-container {
+  border: 1px solid #444;
+  position: absolute; 
+  top: -80px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1c1c2e; 
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center; 
+}
+
+.player-icon {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.summoner-name {
+  color: #fff;
+  font-size: 14px;
+  margin: 5px 0;
 }
 
 .player-stats h2 {
   font-size: 18px; 
+  margin-top: 70px; /* Asegurar suficiente espacio para el icono y el nombre */
   margin-bottom: 10px; 
   color: #9d9dff; 
 }
